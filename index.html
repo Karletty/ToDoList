@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/icon" href="Images/favicon.png">
+    <title>Organized life</title>
+</head>
+
+<body class="center">
+    <header class="header center">
+        <div class="center">
+            <img src="Images/logo.png" alt="logo" class="logo">
+            <h1>Organized Life</h1>
+        </div>
+        <nav class="nav-container">
+            <ul class="nav">
+                <li class="nav-item center">
+                    <img src="Images/add-task.png" alt="add task" title="Add Task" class="icon">
+                </li>
+                <li class="nav-item center">
+                    <img src="Images/tasks.png" alt="tasks" title="Tasks" class="icon">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="screens">
+        <section class="screen center task-creator-screen">
+            <div class="task-creator center">
+                <h3 class="screen-title">CREATE TASK</h3>
+                <div class="input-container">
+                    <label class="input-label">Task name</label>
+                    <input type="text" class="task-input task-name" maxlength="25">
+                    <span class="error"></span>
+                </div>
+                <div class="input-container">
+                    <label class="input-label">Scheduled time</label>
+                    <input type="time" class="task-input task-time">
+                    <span class="error"></span>
+                </div>
+                <div class="input-container">
+                    <label class="input-label">Priority</label>
+                    <div class="priority-btns">
+                        <button class="low priority-btn">Low</button>
+                        <button class="medium priority-btn">Medium</button>
+                        <button class="high priority-btn">High</button>
+                    </div>
+                    <span class="error"></span>
+                </div>
+                <div class="input-container">
+                    <label class="input-label">Description</label>
+                    <input type="text" class="task-input task-description">
+                    <span class="error"></span>
+                </div>
+                <button class="add-task-btn">ADD TASK</button>
+            </div>
+            <div class="calendar">
+                <label class="input-label">Scheduled date</label>
+                <div class="calendar-info">
+                    <div class="center">
+                        <img src="Images/calendar.png" class="calendar-icon">
+                        <h3 class="month-year">MES AÑO</h3>
+                    </div>
+                    <div class="center">
+                        <button class="calendar-prev"></button>
+                        <button class="calendar-next"></button>
+                    </div>
+                </div>
+                <div>
+                    <div class="calendar-week">
+                    </div>
+                    <div class="calendar-days">
+                    </div>
+                </div>
+                <span class="error"></span>
+            </div>
+        </section>
+        <section class="screen center tasks-screen">
+            <h3 class="screen-title">TASK LIST</h3>
+            <div class="tasks-container center">
+            </div>
+        </section>
+    </main>
+    <footer class="footer"></footer>
+    <script src="calendar.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
