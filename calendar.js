@@ -20,12 +20,12 @@ function writeDayName() {
     }
 }
 
-function makeDateSelect(){
+function makeDateSelect() {
     for (let i = 0; i < monthDays.length; i++) {
-        monthDays[i].addEventListener('click',() =>{
+        monthDays[i].addEventListener('click', () => {
             let position = i;
             monthSelect = selector(position, monthDays, monthSelect);
-        });    
+        });
     }
 }
 
@@ -93,7 +93,6 @@ function nextMonth() {
         actualMonth++;
     }
     else {
-        console.log("Aumento un año")
         actualMonth = 0;
         actualYear++;
     }
