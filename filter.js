@@ -23,7 +23,6 @@ filter.addEventListener("click", () => {
     }
 });
 function filterValues() {
-    let priorityArray = getPriority();
     let positions = [];
     let taskValue= getTotalDate();
     for (let i = 0; i < allTask.length; i++) {
@@ -31,7 +30,8 @@ function filterValues() {
     }
     positions = sortValues(taskValue, positions);
     showTasksByOrder(positions);
-    if (filterValue === "high" || filterValue === "medium" || filterValue === "low" || filterValue ==="date") {
+    let priorityArray = getPriority();
+    if (filterValue === "high" || filterValue === "medium" || filterValue === "low") {
         let priority;
         switch (filterValue) {
             case "value":
@@ -47,18 +47,22 @@ function filterValues() {
                 default:
                     break;
         }
-        if (filterValue !== "date") {
-            showOnlyPriority(priority, priorityArray);
-        }
-        else{
-            for (let i = 0; i < allTask.length; i++) {
-                allTask[i].classList.remove("hide");
-            }
-        }
+        showOnlyPriority(priority, priorityArray);
     }
     else {
         for (let i = 0; i < allTask.length; i++) {
             allTask[i].classList.remove("hide");
+        }
+        if (filterValue !== "date") {
+            let newPositions = [];
+            for (let j = 0; j < allTask.length; j++) {
+                newPositions[j] = j
+            }
+            newPositions = sortValues(priorityArray,newPositions);
+            if (filterValue !== "highToLow") {
+                newPositions = newPositions.reverse();
+            }
+            showTasksByOrder(newPositions);
         }
     }
 }
