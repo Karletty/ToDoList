@@ -2,7 +2,6 @@ const filter = document.getElementById("filter");
 let taskHour = [];
 let taskDate = [];
 let taskDateValue = [];
-let taskPriority = [];
 let allTask = [];
 let filterValue;
 let clickedTimes = 0;
@@ -79,8 +78,6 @@ function declareTasks() {
     for (let i = 0; i < allTask.length; i++) {
         taskHour[i] = allTask[i].querySelector(".hour").innerText;
         taskDate[i] = allTask[i].querySelector(".date").innerText;
-        taskPriority[i] = allTask[i].querySelector(".priority");
-        taskPriority[i] = taskPriority[i].innerText;
     }
 }
 function getPriority(){
@@ -117,18 +114,6 @@ function showOnlyPriority(priority, prioritiesArray) {
             allTask[i].classList.add("hide")
         }    
     }
-}
-function getTotalMinutes() {
-    for (let i = 0; i < taskHour.length; i++) {
-        totalMinutes = taskHour;
-        totalMinutes[i] = totalMinutes[i].replace(":", "");
-        let hours = Number(totalMinutes[i].substring(0, 2));
-        let minutes = Number(totalMinutes[i].substring(2, 5));
-        totalMinutes[i] = (hours * 60) + minutes;
-    }
-}
-function getPriorityPositions(priority){
-
 }
 function getTotalDate() {
     let taskValue = [];
