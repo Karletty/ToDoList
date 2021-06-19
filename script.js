@@ -7,9 +7,25 @@ const taskTime = document.querySelector(".task-time");
 const addTaskBtn = document.querySelector(".add-task-btn");
 const taskContainer = document.querySelector(".tasks-container");
 const taskDescription = document.querySelector(".task-description");
+const calendarDropdown = document.querySelector(".calendar-dropdown");
+const calendarInfo = document.querySelector(".calendar-info");
+const calendarItems = document.querySelector(".calendar-items");
 const priorityText = ["Low", "Medium", "High"];
+let dropdownClick;
 let monthSelect = [];
 let prioritySelect = [];
+
+calendarDropdown.addEventListener("click",() => {
+    dropdownClick = !dropdownClick;
+    if (dropdownClick) {
+        calendarInfo.classList.add("flex");
+        calendarItems.classList.add("block");
+    }
+    else {
+        calendarInfo.classList.remove("flex");
+        calendarItems.classList.remove("block");
+    }
+});
 
 class Task {
     constructor(name, time, priority, description, date) {
@@ -42,6 +58,9 @@ const changeScreens = position => {
         screens[position].classList.remove("hide");
         if (i !== position) {
             screens[i].classList.add("hide");
+        }
+        if(position === 1){
+            error[5].innerText = "";
         }
     }
 }
@@ -107,7 +126,7 @@ function validateHour(completeHour) {
             let actualHour = date.getHours();
             let actualMinutes = date.getMinutes();
             if (hourSelected < actualHour || (minutesSelected < actualMinutes && hourSelected === actualHour)) {
-                error[1].innerText = "You have to select a valid hour";
+                error[1].innerText = "You cannot select a time that has already passed";
                 return false;
             }
         }
@@ -116,7 +135,7 @@ function validateHour(completeHour) {
 }
 function validateDate(selectedDate) {
     if (selectedDate.getDate() < actualDate.getDate() && selectedDate.getMonth() === actualDate.getMonth()) {
-        error[4].innerText = "You have to select a valid date";
+        error[4].innerText = "You cannot select a date that has already passed";
         return false;
     }
     return true;

@@ -9,11 +9,11 @@
     <title>Organized life</title>
 </head>
 
-<body class="center">
+<body>
     <header class="header center">
         <div class="center">
             <img src="Images/logo.png" alt="logo" class="logo">
-            <h1>Organized Life</h1>
+            <h1 class="page-title">Organized Life</h1>
         </div>
         <nav class="nav-container">
             <ul class="nav">
@@ -28,53 +28,58 @@
     </header>
     <main class="screens">
         <section class="screen center task-creator-screen">
-            <div class="task-creator center">
-                <h3 class="screen-title">CREATE TASK</h3>
-                <div class="input-container">
-                    <label class="input-label">Task name</label>
-                    <input type="text" class="task-input task-name" maxlength="25">
-                    <span class="error"></span>
-                </div>
-                <div class="input-container">
-                    <label class="input-label">Scheduled time</label>
-                    <input type="time" class="task-input task-time">
-                    <span class="error"></span>
-                </div>
-                <div class="input-container">
-                    <label class="input-label">Priority</label>
-                    <div class="priority-btns">
-                        <button class="low priority-btn">Low</button>
-                        <button class="medium priority-btn">Medium</button>
-                        <button class="high priority-btn">High</button>
+            <h3 class="screen-title">CREATE TASK</h3>
+            <div class=" task-creator-container center">
+                <div class="calendar">
+                    <div class="input-container">
+                        <label class="input-label">Scheduled date <img src="Images/arrow.png" alt="down arrow"
+                                class="calendar-dropdown"> </label>
+                    </div>
+                    <div class="calendar-info">
+                        <div class="center">
+                            <img src="Images/calendar.png" class="calendar-icon">
+                            <h3 class="month-year">MES AÑO</h3>
+                        </div>
+                        <div class="center">
+                            <button class="calendar-prev"></button>
+                            <button class="calendar-next"></button>
+                        </div>
+                    </div>
+                    <div class="calendar-items">
+                        <div class="calendar-week">
+                        </div>
+                        <div class="calendar-days">
+                        </div>
                     </div>
                     <span class="error"></span>
                 </div>
-                <div class="input-container">
-                    <label class="input-label">Description</label>
-                    <input type="text" class="task-input task-description">
-                    <span class="error"></span>
+                <div class="task-creator center">
+                    <div class="input-container">
+                        <label class="input-label">Task name</label>
+                        <input type="text" class="task-input task-name" maxlength="25">
+                        <span class="error"></span>
+                    </div>
+                    <div class="input-container">
+                        <label class="input-label">Scheduled time</label>
+                        <input type="time" class="task-input task-time">
+                        <span class="error"></span>
+                    </div>
+                    <div class="input-container">
+                        <label class="input-label">Priority</label>
+                        <div class="priority-btns">
+                            <button class="low priority-btn">Low</button>
+                            <button class="medium priority-btn">Medium</button>
+                            <button class="high priority-btn">High</button>
+                        </div>
+                        <span class="error"></span>
+                    </div>
+                    <div class="input-container">
+                        <label class="input-label">Description</label>
+                        <input type="text" class="task-input task-description">
+                        <span class="error"></span>
+                    </div>
+                    <a class="add-task-btn">ADD TASK</a>
                 </div>
-                <a class="add-task-btn">ADD TASK</a>
-            </div>
-            <div class="calendar">
-                <label class="input-label">Scheduled date</label>
-                <div class="calendar-info">
-                    <div class="center">
-                        <img src="Images/calendar.png" class="calendar-icon">
-                        <h3 class="month-year">MES AÑO</h3>
-                    </div>
-                    <div class="center">
-                        <button class="calendar-prev"></button>
-                        <button class="calendar-next"></button>
-                    </div>
-                </div>
-                <div>
-                    <div class="calendar-week">
-                    </div>
-                    <div class="calendar-days">
-                    </div>
-                </div>
-                <span class="error"></span>
             </div>
         </section>
         <section class="screen center tasks-screen">
@@ -89,6 +94,158 @@
             </select>
             <span class="error"></span>
             <div class="tasks-container center">
+                <div class="task">
+                    <div class="task-time high">
+                        <div class="date-container">
+                            <p class="hour">04:20</p>
+                            <p class="date">6/20/2021</p>
+                        </div>
+                        <p class="priority">High</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">jknolnoinzao</p>
+                        <hr class="paragraph-break">
+                        <p>aslajnjnkajk</p>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-time medium">
+                        <div class="date-container">
+                            <p class="hour">16:20</p>
+                            <p class="date">6/30/2021</p>
+                        </div>
+                        <p class="priority">Medium</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">jnsaooannoaiaio</p>
+                        <hr class="paragraph-break">
+                        <p>nololnaoinojabnj</p>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-time low">
+                        <div class="date-container">
+                            <p class="hour">16:24</p>
+                            <p class="date">7/7/2021</p>
+                        </div>
+                        <p class="priority">Low</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">aslnklanlsnal</p>
+                        <hr class="paragraph-break">
+                        <p>sanaonononoi</p>
+                    </div>
+                </div><div class="task">
+                    <div class="task-time high">
+                        <div class="date-container">
+                            <p class="hour">04:20</p>
+                            <p class="date">6/20/2021</p>
+                        </div>
+                        <p class="priority">High</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">jknolnoinzao</p>
+                        <hr class="paragraph-break">
+                        <p>aslajnjnkajk</p>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-time medium">
+                        <div class="date-container">
+                            <p class="hour">16:20</p>
+                            <p class="date">6/30/2021</p>
+                        </div>
+                        <p class="priority">Medium</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">jnsaooannoaiaio</p>
+                        <hr class="paragraph-break">
+                        <p>nololnaoinojabnj</p>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-time low">
+                        <div class="date-container">
+                            <p class="hour">16:24</p>
+                            <p class="date">7/7/2021</p>
+                        </div>
+                        <p class="priority">Low</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">aslnklanlsnal</p>
+                        <hr class="paragraph-break">
+                        <p>sanaonononoi</p>
+                    </div>
+                </div><div class="task">
+                    <div class="task-time high">
+                        <div class="date-container">
+                            <p class="hour">04:20</p>
+                            <p class="date">6/20/2021</p>
+                        </div>
+                        <p class="priority">High</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">jknolnoinzao</p>
+                        <hr class="paragraph-break">
+                        <p>aslajnjnkajk</p>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-time medium">
+                        <div class="date-container">
+                            <p class="hour">16:20</p>
+                            <p class="date">6/30/2021</p>
+                        </div>
+                        <p class="priority">Medium</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">jnsaooannoaiaio</p>
+                        <hr class="paragraph-break">
+                        <p>nololnaoinojabnj</p>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-time low">
+                        <div class="date-container">
+                            <p class="hour">16:24</p>
+                            <p class="date">7/7/2021</p>
+                        </div>
+                        <p class="priority">Low</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">aslnklanlsnal</p>
+                        <hr class="paragraph-break">
+                        <p>sanaonononoi</p>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-time low">
+                        <div class="date-container">
+                            <p class="hour">16:24</p>
+                            <p class="date">7/7/2021</p>
+                        </div>
+                        <p class="priority">Low</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">aslnklanlsnal</p>
+                        <hr class="paragraph-break">
+                        <p>sanaonononoi</p>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-time low">
+                        <div class="date-container">
+                            <p class="hour">16:24</p>
+                            <p class="date">7/7/2021</p>
+                        </div>
+                        <p class="priority">Low</p>
+                    </div>
+                    <div class="task-info center">
+                        <p class="task-title">aslnklanlsnal</p>
+                        <hr class="paragraph-break">
+                        <p>sanaonononoi</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

@@ -4,21 +4,17 @@ let taskDate = [];
 let taskDateValue = [];
 let allTask = [];
 let filterValue;
-let clickedTimes = 0;
 filter.addEventListener("click", () => {
-    clickedTimes += 1;
-    if (clickedTimes === 2) {
-        clickedTimes = 0;
-        filterValue = filter.value;
-        allTask = document.getElementsByClassName("task");
-        if (allTask.length < 2) {
-            error[5].innerText = "You must have at least 2 task to filter";
-        }
-        else {
-            error[5].innerText = "";
-            declareTasks();
-            filterValues();
-        }
+    clickedTimes = 0;
+    filterValue = filter.value;
+    allTask = document.getElementsByClassName("task");
+    if (allTask.length < 2) {
+        error[5].innerText = "You must have at least 2 task to filter";
+    }
+    else {
+        error[5].innerText = "";
+        declareTasks();
+        filterValues();
     }
 });
 function filterValues() {
